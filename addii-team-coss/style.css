@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 10;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/nova.jpeg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    opacity:0;
+}
+.logo{
+    width:600px;
+    z-index: 10;
+}
+.blackwidow{
+width:221px;
+}
+.ironman{
+    width:370px;
+}
+.hulk{
+    width:274px;
+}
+.captian{
+    width:154px;
+}
+.clint{
+    width:366px;
+}
+.thor{
+    width:237px;
+}
+.blackwidow-outer{
+    position:absolute;
+    left: 119px;
+    top: 26px;
+    }
+
+.ironman-outer{
+    position:absolute;
+    z-index: 9;
+    top: 64px;
+    }
+    .hulk-outer{
+        position:absolute;
+        right: 45px;
+        top: -12px;
+    }
+    .captian-outer{
+        position:absolute;
+        bottom: -10px;
+        left: 299px;
+    }
+    .clint-outer{
+        position:absolute;
+        bottom: -21px;
+        left: 589px;
+    }
+    .thor-outer{
+        position:absolute;
+        right: 285px;
+        bottom: -4px;
+    }
+    .space{
+        z-index:50;
+    }
+
+    .blackwidow-outer,.captian-outer,.hulk-outer,.ironman-outer,.thor-outer,.clint-outer{
+        animation:logoanimation;
+        animation-duration:4s;
+        animation-delay:4s;
+
+    }
+    @keyframes logoanimation{
+        0%{
+            transform: rotate(0deg)
+        }
+
+        100%{
+            transform: rotate(360deg)
+        }
+    }

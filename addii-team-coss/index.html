@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        body {
+          overflow: hidden;
+        }
+        section {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: black;
+        }
+  
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 4px;
+          height: 4px;
+          background: #fff;
+          border-radius: 50%;
+          box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+            0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.1);
+          animation: animate 3s linear infinite;
+        }
+        span::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 300px;
+          height: 1px;
+          background: linear-gradient(90deg, #fff, transparent);
+        }
+        @keyframes animate {
+          0% {
+            transform: rotate(315deg) translateX(0);
+            opacity: 1;
+          }
+          70% {
+            opacity: 1;
+          }
+          100% {
+            transform: rotate(315deg) translateX(-1000px);
+            opacity: 0;
+          }
+        }
+        span:nth-child(1) {
+          top: 0;
+          right: 0;
+          left: initial;
+          animation-delay: 0s;
+          animation-duration: 1s;
+        }
+        span:nth-child(2) {
+          top: 0;
+          right: 80px;
+          left: initial;
+          animation-delay: 0.2s;
+          animation-duration: 3s;
+        }
+        span:nth-child(3) {
+          top: 80;
+          right: 0px;
+          left: initial;
+          animation-delay: 0.4s;
+          animation-duration: 2s;
+        }
+        span:nth-child(4) {
+          top: 0;
+          right: 180px;
+          left: initial;
+          animation-delay: 0.6s;
+          animation-duration: 1.5s;
+        }
+        span:nth-child(5) {
+          top: 0;
+          right: 400px;
+          left: initial;
+          animation-delay: 0.8s;
+          animation-duration: 2.5s;
+        }
+        span:nth-child(6) {
+          top: 0;
+          right: 600px;
+          left: initial;
+          animation-delay: 1s;
+          animation-duration: 3s;
+        }
+        span:nth-child(7) {
+          top: 300px;
+          right: 0px;
+          left: initial;
+          animation-delay: 1.2s;
+          animation-duration: 1.75s;
+        }
+        span:nth-child(8) {
+          top: 0px;
+          right: 700px;
+          left: initial;
+          animation-delay: 1.4s;
+          animation-duration: 1.25s;
+        }
+        span:nth-child(9) {
+          top: 0px;
+          right: 1000px;
+          left: initial;
+          animation-delay: 0.75s;
+          animation-duration: 2.25s;
+        }
+        span:nth-child(9) {
+          top: 0px;
+          right: 450px;
+          left: initial;
+          animation-delay: 2.75s;
+          animation-duration: 2.75s;
+        }
+        .labelmarvel {
+          height: 120px;
+          width: 670px;
+          position: absolute;
+          font-size: 10rem;
+          color: rgb(198, 184, 184);
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          top: 18rem;
+          left: 26rem;
+          animation: showLabel;
+          animation-duration: 20s;
+          transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        }
+        
+        @keyframes showLabel{
+          0%{
+              transform: scale(0,0);
+          }
+          30%{
+              transform: scale(4,8.8);
+              opacity: 0;
+          }
+          100%{
+            opacity:0;
+          }
+        }
+        .space{
+            animation-delay: 4s;
+            animation-name: spaceRemove;
+            animation-duration: 10s;
+        }
+        @keyframes spaceRemove {
+            0%{
+                opacity: 0;
+            }
+            80%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+      </style>
+</head>
+<body>
+    <audio src="./marvel_intro_music (3).mp3" type="audio/mp3" autoplay></audio>
+    <div class="">
+        <section>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </section>
+          <div class="labelmarvel">
+              <img src="./images/marvel-removebg-preview.png" alt="">
+          </div>
+    </div>
+        <div class="wrapper space">
+            <div class="logo-outer">
+                <img class="logo"src="./images/./logo-removebg-preview.png" alt="image cover">
+            </div>
+            <div class="blackwidow-outer">
+                <img class="blackwidow"src="./images/black-removebg-preview.png" alt="image cover">
+            </div>
+            <div class="captian-outer">
+                <img class="captian" src="./images/Captain-removebg-preview.png" alt="image cover">
+            </div>
+            <div class="hulk-outer">
+                <img class="hulk" src="./images/Hulk-removebg-preview.png" alt="image cover">
+            </div>
+            <div class="ironman-outer">
+                <img class="ironman" src="./images/ironMan-removebg-preview.png" alt="image cover">
+            </div>
+            <div class="thor-outer">
+                <img class="thor" src="./images/thor-removebg-preview.png" alt="image cover">
+            </div>
+            <div class="clint-outer">
+                <img class="clint" src="./images/clint.png" alt="image cover">
+            </div>
+        </div>
+</body>
+</html>
